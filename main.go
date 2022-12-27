@@ -92,9 +92,9 @@ func isTelephoneExist(db *gorm.DB, telephone string) bool {
 	db.Where("telephone = ?", telephone).First(&user)
 	if user.ID != 0 {
 		return true
-	} else {
-		return false
-	}
+	} 
+	return false
+
 }
 
 func RandomString(n int) string {
